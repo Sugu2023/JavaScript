@@ -18,3 +18,25 @@ const myInt=24;
 const myFloat=2.4;
 console.log(typeof(myInt));
 console.log(typeof(myFloat));
+
+const btn=document.getElementById("button2");
+        const para2=document.getElementById("para1")
+
+        btn.addEventListener('click',updateBtn);
+function updateBtn()
+{
+    if(btn.textContent==="StartMachine")
+    {
+        para2.textContent="The machine is started";
+        btn.textContent="Stop Machine";
+       
+        
+    }
+    
+    else
+    {
+        btn.textContent="StartMachine";
+        para2.textContent="The machine is Stopped";
+    }
+   
+}
