@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    
+    <script src="function.js" defer></script>
+    <base href="https://www.google.com">
+     
+</head>
+<body>
+    <button id="but">CLick me</button>
+    <p id="para1"></p>
+    <label for="key">Enter any key:</label>
+    <input type="text" id="key">
+    <p id="ans"></p>
+    <button onclick="greeting()">Haha</button>
+   <hr>
+   <label for="num">Enter number</label>
+   <input type="number" id="num">
+   <button id="adding">add </button>
+   <p id="addition"></p>
+   <script>
+        const x = 1;
+    
+        function a() {
+          const y = 2;
+          output(y);
+        }
+    
+        function b() {
+          const z = 3;
+          output(x);
+        }
+    
+        function output(value) {
+          const para = document.createElement('p');
+          document.body.appendChild(para);
+          para.textContent = `Value: ${value}`;
+        }
+
+        const numVal=document.querySelector("#num");
+        const para2=document.querySelector("#addition");
+       
+        const but1=document.querySelector("#adding");
+        
+        
+        const answer= but1.addEventListener('click',calculate);
+    
+     function calculate()
+      {
+        const vale=numVal.value;
+        let sum=0;
+        for(let i=0;i<=vale;i++)
+        {
+            sum+=i;
+        }
+        output(sum);
+        //console.log(vale);
+    
+      }
+      </script>
+      <hr>
+      <form action="">
+      <label for="user">Enter your username</label>
+      <input type="text" id="user" required><br>
+      <label for="pass">Enter your password:</label>
+      <input type="password" id="pass" required><br><br>
+      <input type="submit" name="" id="sub">
+      
+    </form>
+    <p id="para3"></p>
+    <hr>
+    <hr>
+    <div id="container">
+        <button I>Clickme</button>
+    </div>
+    <p id="output"></p>
+</body>
+</html>
