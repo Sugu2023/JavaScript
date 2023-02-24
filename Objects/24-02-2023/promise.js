@@ -159,3 +159,30 @@ checkMail()
     console.log("HI")
    }
    fetchdata();
+
+//chaining await
+
+   function getData()
+   {
+    return new Promise((resolve,reject)=>
+    {
+        setTimeout(()=>
+        {
+            resolve('Waited 5 seconds');
+        },5000);
+    })
+   }
+   async function ProcessData()
+   {
+    const result= await getData();
+    return result.toUpperCase();
+   }
+
+   async function fetchdata()
+   {  
+    //console.log('calling await');
+    const result=await ProcessData();
+    console.log(result);
+    console.log("HI")
+   }
+   fetchdata();
