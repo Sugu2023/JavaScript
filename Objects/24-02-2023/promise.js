@@ -126,4 +126,15 @@ checkMail()
    // Promise.resolve(new Error('kavin')).then(resolved,rejected);
 
    const p= Promise.resolve(3);
-   p.then((value)=>{console.log(value);})
+   p.then((value)=>{console.log(value);})]
+   
+    //chaining then()
+
+   const a=new Promise((resolve,reject)=>
+   {
+    setTimeout(()=>{
+    resolve(10);},1000);
+   });
+   a.then(result => {console.log(result);
+   return result+2;})
+   .then(result =>{console.log(result);})
