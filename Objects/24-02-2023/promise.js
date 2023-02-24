@@ -138,3 +138,24 @@ checkMail()
    a.then(result => {console.log(result);
    return result+2;})
    .then(result =>{console.log(result);})
+   
+    //await()
+   function getData()
+   {
+    return new Promise((resolve,reject)=>
+    {
+        setTimeout(()=>
+        {
+            resolve('Waited 5 seconds');
+        },5000);
+    })
+   }
+
+   async function fetchdata()
+   {  
+    //console.log('calling await');
+    const result=await getData();
+    console.log(result);
+    console.log("HI")
+   }
+   fetchdata();
